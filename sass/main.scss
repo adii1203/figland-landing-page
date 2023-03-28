@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}
+
+.header{
+    // border: 1px solid red;
+    width: min(75rem, 100%);
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo img{
+        width: 9rem;
+    }
+
+    .primary__nav{
+        display: none;
+    }
+
+    .hamburgur-menu{
+        // border: 1px solid red;
+        cursor: pointer;
+        // pointer-events: none;
+
+        .menu-bars{
+            fill: #fff;
+            transform-origin: center;
+            transition: all 300ms ease-in;
+            rx:2px;
+        }
+    }
+}
+.middle-animation{
+    width: 80%;
+    transform: rotate(40deg);
+    x:-10px;
+    y:14px;
+}
+.bottom-animation{
+    width: 80%;
+    transform: rotate(-40deg);
+    x:20px;
+    y:15px;
+}
+
+.button{
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    padding: .5rem 1.4rem;
+    font-size: .6rem;
+    font-family: 'Roboto Mono', monospace;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
