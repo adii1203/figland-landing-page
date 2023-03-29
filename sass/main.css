@@ -11,6 +11,7 @@ body {
 
 .header {
   width: min(75rem, 100%);
+  margin-inline: auto;
   padding: 0.8rem;
   display: flex;
   align-items: center;
@@ -77,4 +78,76 @@ body {
   font-family: "Roboto Mono", monospace;
   border: 1px solid #fff;
   cursor: pointer;
+}
+
+.hero {
+  width: min(75rem, 100%);
+  margin-inline: auto;
+  padding: 0 0.8rem;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  margin-top: 2rem;
+}
+.hero .text-box {
+  border: inherit;
+  margin-inline: auto;
+  width: 80%;
+  padding: 0 1rem;
+}
+.hero .text-box h1 {
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+.hero .text-box p {
+  font-size: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+.hero .text-box .button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero .text-box .button-wrapper .button {
+  display: block;
+  align-self: center;
+}
+.hero .text-box .button-wrapper .button.bg-blue {
+  background-color: #4452FE;
+  border: none;
+  padding-inline: 1.6rem;
+  padding-block: 1rem;
+}
+.hero .text-box .button-wrapper .button.bg-blue + button {
+  padding-inline: 1.8rem;
+  padding-block: 1rem;
+}
+
+@media (min-width: 40em) {
+  .hamburgur-menu {
+    display: none;
+  }
+  .header .primary__nav {
+    position: static;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    background-color: #000;
+    opacity: 1;
+  }
+  .header .primary__nav .nav-links {
+    color: #fff;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .hero .text-box {
+    width: 50%;
+    margin-top: 4rem;
+  }
+  .hero .text-box .button-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4rem;
+  }
 }/*# sourceMappingURL=main.css.map */
