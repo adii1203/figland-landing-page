@@ -139,6 +139,34 @@ body{
     }
 }
 
+    .image-box{
+        // border: 1px solid red;
+        position: relative;
+        height: 50em;
+        margin-inline: auto;
+        margin-top: 4rem;
+        overflow-x: hidden;
+        
+        .images{
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            transform: translate(-50%, 0) rotate(45deg);
+
+        }
+        .image-1{
+            transform: translate(-26.4rem, 22rem) rotate(45deg);            // left: -0.5rem;
+
+        }
+        .image-2{
+            transform: translate(5.4rem, 22rem) rotate(45deg);
+        }
+        .image-3{
+            transform: translate(-10.5rem, 6rem) rotate(45deg);
+        }
+
+    }
+
 @media (min-width:40em){
     .hamburgur-menu{
         display: none;
