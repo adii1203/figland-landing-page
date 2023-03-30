@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 
 *{
     margin: 0;
@@ -8,6 +9,12 @@
 
 body{
     background-color: #000;
+}
+// utility class
+
+.flex{
+    display: flex;
+    align-items: center;
 }
 
 .header{
@@ -45,10 +52,8 @@ body{
         }
     }
     .nav-show{
-        // display: flex;
         top: 4rem;
         opacity: 1;
-
     }
 
     .hamburgur-menu{
@@ -92,7 +97,6 @@ body{
 .hero{
     width: min(75rem, 100%);
     margin-inline: auto;
-    padding:  0 .8rem;
     color: #fff;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
@@ -137,7 +141,7 @@ body{
 
     .image-box{
         position: relative;
-        height: 55em;
+        height: 52em;
         margin-inline: auto;
         margin-top: 4rem;
         overflow-x: hidden;
@@ -167,12 +171,90 @@ body{
             position: absolute;
             width: 100%;
             height: 50%;
-            bottom: 0;
+            bottom: 0px;
             background: rgb(255,255,255);
             background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 81%);
         }
 
     }
+
+
+
+
+// main
+
+.main{
+    color: #fff;
+    padding:  0 .8rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #181818;
+
+    .features{
+        padding-top: 2rem;
+
+        .features-head{
+            text-align: center;
+    
+            & h2{
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+            & p{
+                border: inherit;
+                max-width: 27rem;
+                width: 85%;
+                margin-inline: auto;
+                font-weight: 300;
+                font-size: 1rem;
+            }
+        }
+    
+        .features-body{
+            
+    
+            .img{
+                display: grid;
+                place-content: center;
+                margin-top: 2.5rem;
+                & img{
+                    max-width: 350px;
+                }
+    
+                & :last-child{
+                    width: 280px;
+                    transform: translateY(-120px) translateX(25px);
+                }
+            }
+    
+            .highlights{
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+    
+    
+                .highlight > div p{
+                    margin-left: .8rem;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+    
+                }
+                .highlight > div img{
+                    height: 20px;
+                    aspect-ratio: 1;
+                }
+                .highlight > p:last-child{
+                    font-size: .8rem;
+                    font-weight: 400;
+                    width: 190px;
+                    line-height: 1.7;
+                    margin-top: .8rem;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width:40em){
     .hamburgur-menu{
@@ -208,5 +290,16 @@ body{
             }
         }
 
+    }
+
+    .main{
+
+        .features-body{
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
     }
 }
