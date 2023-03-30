@@ -32,3 +32,45 @@ function hideNav(){
     primaryNav.classList.remove('nav-show')
     primaryNav.setAttribute('aria-expanded', 'false')
 }
+
+
+// image animation
+
+// gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.image-3',{
+    scrollTrigger:{
+        trigger:".image-3",
+        start:"50px center",
+        end:'80px',
+        scrub:1
+    },
+    opacity:1,
+    duration:1,
+    y:'6rem',
+    rotate:'45deg'
+})
+gsap.to('.image-1',{
+    scrollTrigger:{
+        trigger:'.image-3',
+        start:'-30px',
+        end:'60px',
+        scrub:1,
+    },
+    opacity:1,
+    duration:1,
+    // delay:1,
+    y:'22rem'
+    
+})
+gsap.to('.image-2',{
+    scrollTrigger:{
+        trigger:'.image-3',
+        start:'-40px',
+        end:'60px',
+        scrub:1,
+    },
+    opacity:1,
+    duration:1,
+    y:'22rem'
+})
