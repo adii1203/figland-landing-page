@@ -93,6 +93,7 @@ gsap.from('.highlight > p',{
     scrollTrigger:{
         trigger:".features-head p",
         start:startPoition(),
+        markers:true,
     }
 })
 
@@ -100,7 +101,7 @@ gsap.from('.highlight > p',{
 function startPoition(){
     let test = document.querySelector('.features-body')
     if(test.getBoundingClientRect().width <= '400'){
-        return '300px'
+        return '150px'
     }
     else{
         return '-180px'
