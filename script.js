@@ -36,8 +36,6 @@ function hideNav(){
 
 // image animation
 
-// gsap.registerPlugin(ScrollTrigger);
-
 gsap.to('.image-3',{
     scrollTrigger:{
         trigger:".image-3",
@@ -59,7 +57,6 @@ gsap.to('.image-1',{
     },
     opacity:1,
     duration:1,
-    // delay:1,
     y:'22rem'
     
 })
@@ -74,3 +71,38 @@ gsap.to('.image-2',{
     duration:1,
     y:'22rem'
 })
+
+
+// features section animation
+gsap.from('.highlight div',{
+    opacity:0,
+    y:'40px',
+    duration:.8,
+    ease:Back.easeOut,
+    scrollTrigger:{
+        trigger:".features-head p",
+        start:startPoition(),
+    }
+})
+gsap.from('.highlight > p',{
+    opacity:0,
+    y:'40px',
+    duration:.8,
+    delay:.5,
+    ease:Expo.easeOut,
+    scrollTrigger:{
+        trigger:".features-head p",
+        start:startPoition(),
+    }
+})
+
+
+function startPoition(){
+    let test = document.querySelector('.features-body')
+    if(test.getBoundingClientRect().width <= '400'){
+        return '300px'
+    }
+    else{
+        return '-180px'
+    }
+}
