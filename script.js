@@ -106,3 +106,28 @@ function startPoition(){
         return '-180px'
     }
 }
+
+// content section animation
+
+gsap.from('.left',{
+    x:'-30px',
+    opacity:0,
+    duration:.5,
+    
+    scrollTrigger:{
+        trigger:".content-head",
+        start:'-20px 80px',
+        scrub:1,
+    }
+})
+gsap.from('.right',{
+    x:'-40px',
+    opacity:0,
+    delay:.5,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:".content-head",
+        start:'-20px 80px',
+        scrub:'200ms',
+    }
+})
