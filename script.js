@@ -101,7 +101,7 @@ gsap.from('.highlight > p',{
 function startPoition(){
     let test = document.querySelector('.features-body')
     if(test.getBoundingClientRect().width <= '400'){
-        return '300px'
+        return '250px'
     }
     else{
         return '-180px'
