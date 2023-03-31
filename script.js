@@ -93,7 +93,6 @@ gsap.from('.highlight > p',{
     scrollTrigger:{
         trigger:".features-head p",
         start:startPoition(),
-        markers:true,
     }
 })
 

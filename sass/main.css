@@ -186,6 +186,7 @@ body {
   font-size: 1rem;
 }
 .main .features .features-body .img {
+  position: relative;
   display: grid;
   place-content: center;
   margin-top: 2.5rem;
@@ -195,7 +196,9 @@ body {
 }
 .main .features .features-body .img :last-child {
   width: 280px;
-  transform: translateY(-120px) translateX(25px);
+  position: absolute;
+  bottom: -60px;
+  left: 40px;
 }
 .main .features .features-body .highlights {
   text-align: left;
@@ -203,6 +206,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin-top: 6rem;
 }
 .main .features .features-body .highlights .highlight > div p {
   margin-left: 0.8rem;
@@ -219,6 +223,54 @@ body {
   width: 190px;
   line-height: 1.7;
   margin-top: 0.8rem;
+}
+
+.contents {
+  margin-top: 6rem;
+}
+.contents .content-head {
+  text-align: center;
+  padding: 0 0.8rem;
+}
+.contents .content-head h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.contents .content-head p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+.contents .content-body {
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+}
+.contents .content-body .box {
+  text-align: center;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  border-radius: 6px;
+  width: 18rem;
+}
+.contents .content-body .box p:nth-child(1) {
+  font-weight: 600;
+}
+.contents .content-body .box button {
+  background-color: #4452FE;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+.contents .content-body .box img {
+  width: 210px;
+  border-radius: 5px;
 }
 
 @media (min-width: 40em) {
@@ -254,5 +306,10 @@ body {
     gap: 4rem;
     justify-content: center;
     margin-top: 2rem;
+  }
+  .contents .content-body {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
