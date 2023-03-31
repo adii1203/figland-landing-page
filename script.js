@@ -109,6 +109,16 @@ function startPoition(){
 
 // content section animation
 
+gsap.from('.content-head', {
+    y:'80px',
+    opacity:0,
+    scrollTrigger:{
+        trigger:'.highlights',
+        start:'center',
+        scrub:1,
+    }
+})
+
 gsap.from('.left',{
     x:'-30px',
     opacity:0,
@@ -125,9 +135,10 @@ gsap.from('.right',{
     opacity:0,
     delay:.5,
     duration:0.5,
+    
     scrollTrigger:{
         trigger:".content-head",
         start:'-20px 80px',
-        scrub:'200ms',
+        scrub:1,
     }
 })

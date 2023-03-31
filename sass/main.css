@@ -273,6 +273,40 @@ body {
   border-radius: 5px;
 }
 
+.partners {
+  margin-top: 4rem;
+  text-align: center;
+}
+.partners .partner-head {
+  text-align: center;
+}
+.partners .partner-head h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.partners .partner-head p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+.partners .partner-body {
+  display: grid;
+  grid-template-columns: repeat(3, 2rem);
+  gap: 2rem;
+  place-content: center;
+  margin-block: 3rem;
+}
+.partners .partner-body img {
+  height: 30px;
+}
+.partners button {
+  margin-block: 1rem;
+  padding: 0.7rem 1.6rem;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
 @media (min-width: 40em) {
   .hamburgur-menu {
     display: none;
@@ -311,5 +345,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
+  }
+  .partners .partner-body {
+    grid-template-columns: repeat(6, 2rem);
   }
 }/*# sourceMappingURL=main.css.map */
