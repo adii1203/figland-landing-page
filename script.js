@@ -126,7 +126,7 @@ gsap.from('.left',{
     
     scrollTrigger:{
         trigger:".content-head",
-        start:'-20px 80px',
+        start:'-30px 80px',
         scrub:1,
     }
 })
@@ -138,7 +138,52 @@ gsap.from('.right',{
     
     scrollTrigger:{
         trigger:".content-head",
-        start:'-20px 80px',
+        start:'-30px 80px',
         scrub:1,
     }
+})
+
+// testimonials 
+
+const testimonialBody = document.querySelector('.testimonial-body')
+// let width = document.querySelector('.test-box').getBoundingClientRect().width
+const slides = document.querySelectorAll('.test-box')
+let amountToMove = slides[0].getBoundingClientRect().width
+
+testimonialBody.style.width = `${amountToMove}px`
+
+
+slides[0].style.right = 0 * amountToMove +'px'
+slides[1].style.right = -3 * amountToMove +'px'
+slides[2].style.right = -3 * amountToMove +'px'
+slides[3].style.right = -3 * amountToMove +'px'
+
+// console.log(amountToMove* -2 + 'px');
+
+const next = document.querySelector('.next')
+const previous = document.querySelector('.previous')
+
+next.addEventListener('click', ()=>{
+    let currentActive = document.querySelector('.active')
+    let nextActive = currentActive.nextElementSibling
+   
+    if(nextActive != null){
+        currentActive.style.opacity = 0
+        nextActive.style.right = '0px'
+    
+        currentActive.classList.remove('active')
+        nextActive.classList.toggle('active')
+    }
+})
+
+previous.addEventListener('click', ()=>{
+    let currentActive = document.querySelector('.active')
+    let previousActive = currentActive.previousElementSibling
+
+    console.log(previousActive);
+    previousActive.style.opacity = 1
+    currentActive.style.right = -3 * amountToMove +'px'
+
+    currentActive.classList.remove('active')
+    previousActive.classList.add('active')
 })

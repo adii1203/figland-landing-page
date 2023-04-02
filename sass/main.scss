@@ -358,6 +358,77 @@ body{
     }
 }
 
+// trstimonials section
+
+.testimonials{
+    margin-top: 3rem;
+    // position: relative;
+    
+    & h2{
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    .testimonial-body{
+        height: 16rem;
+        position: relative;
+        margin-top: 2rem;
+        overflow: hidden;
+        margin-inline: auto;
+        border: 1px solid #fff;
+        border-radius: 12px;
+
+        .test-box{
+            position: absolute;
+            border: 1px solid #fff;
+            max-width: 35rem;
+            margin: auto;
+            padding: 2rem;
+            border-radius: 12px;
+            inset: 0;
+            background-color: #181818;
+            transition: opacity 1s ease-in-out , right 1s ease-in;
+
+    
+            & > div{
+                display: flex;
+                gap: 1.6rem;
+            
+    
+                & p:first-child{
+                    font-weight: 600;
+                }
+                & p:last-child{
+                    font-size: .8rem;
+                }
+            }
+    
+            & > p{
+                line-height: 1.5;
+                padding-block: 2rem;
+                font-size: .8rem;
+            }
+        }
+    }
+    .testimonials-btn{
+        padding-block: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        & div{
+            background-color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+        }
+    }
+}
+
 @media (min-width:40em){
     .hamburgur-menu{
         display: none;
